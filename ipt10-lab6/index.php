@@ -1,7 +1,6 @@
 <?php
 require "vendor/autoload.php";
 
-
 use Monolog\Level;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
@@ -79,13 +78,14 @@ class TestClass
 $name = "Gunther";
 $obj = new TestClass('ipt10');
 
-echo $obj->greet($name);
+echo "\n" . $obj->greet($name);
 
 $data = [100, 345, 4563, 65, 234, 6734, -99];
 
-echo "   Average: " . $obj->getAverage($data) . "\n";
+echo "\n" . "   Average: " . $obj->getAverage($data) . "\n";
 echo "   Smallest: " . $obj->smallest($data) . "\n";
 echo "   Largest: " . $obj->largest($data) . "\n";
+echo "\n" ;
 
 $log->info('data', ['data' => $data]);
 $log->info('object', ['object' => 'Instance of TestClass']);
